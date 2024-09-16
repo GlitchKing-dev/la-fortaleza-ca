@@ -10,21 +10,26 @@
     
     <!-- Open graph -->
     <meta property="og:title" content="Egresos de La Fortaleza C.A.">
-    <meta property="og:image" content="assets/img/favicon.png">
+    <meta property="og:image" content="/assets/img/image-preview.png">
+    <meta property="og:image:alt" content="Logotipo de La Fortaleza C.A.">
     <meta property="og:description" content="Registro de egresos de la empresa la Fortaleza C.A.">
-    <meta property="og:url" content="cambio">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="La Fortaleza C.A.">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://la-fortaleza-ca.free.nf/pages/egresos.php">
     
     <!-- Estilos -->
     <link rel="stylesheet" href="/assets/css/egresos-styles.css">
     <link rel=stylesheet href="/assets/css/fonts.css">
     <link rel=icon href="/assets/img/favicon.png">
 
-    <title>La Fortaleza C.A.</title>
+    <title>Egresos</title>
     
 </head>
 <body>
     <header>
         <h1>La Fortaleza C.A.</h1>
+        <p class="rif">RIF: J-090345234</p>
         <nav>
             <a class="nav__link" href="../index.php">. Inicio .</a>
             <a class="nav__link" href="ingresos.php">. Registrar Ingreso .</a>

@@ -10,9 +10,13 @@
     
     <!-- Open graph -->
     <meta property="og:title" content="La Fortaleza C.A.">
-    <meta property="og:image" content="assets/img/favicon.png">
+    <meta property="og:image" content="assets/img/image-preview.png">
+    <meta property="og:image:alt" content="Logotipo de La Fortaleza C.A.">
     <meta property="og:description" content="Aplicación web para el gestionamiento de la empresa la Fortaleza C.A.">
-    <meta property="og:url" content="http://the-fortress.free.nf/index.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="La Fortaleza C.A.">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://la-fortaleza-ca.free.nf/index.php">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -25,13 +29,13 @@
 <body>
     <header>
         <h1>La Fortaleza C.A.</h1>
+        <p class="rif">RIF: J-090345234</p>
         <nav>
             <a class="nav__link" href="pages/ingresos.php">. Registrar Ingreso .</a>
             <a class="nav__link" href="pages/egresos.php">. Registrar Egreso .</a>
             <a class="nav__link" href="pages/reporte.php">. Reporte .</a>
         </nav>
     </header>
-    <!-- Seleccione alguna de las opciones del menú superior para gestionar ingresos, egresos o visualizar los reportes.-->
     <main>
         <h2 class="main__title">Bienvenido a la plataforma de La Fortaleza C.A.</h2>
         

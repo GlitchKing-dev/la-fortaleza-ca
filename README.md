@@ -8,6 +8,7 @@ Este proyecto es una aplicación web para la empresa La Fortaleza C.A. (Ficticia
 - Generación de reportes mensuales.
 - Diferenciación entre ganancias y pérdidas.
 - Diseño responsivo para su visualización en distintos dispositivos.
+- Meta Tags Open Graph para mejor visualización de la plataforma en las redes sociles
 
 ## Tecnologías utilizadas
 
@@ -21,6 +22,7 @@ Este proyecto es una aplicación web para la empresa La Fortaleza C.A. (Ficticia
 
    ```bash
    git clone https://github.com/tu-usuario/la-fortaleza-reporte.git
+
 ## Servicio de Hosting
 
 El proyecto se encuentra subido al servicio de hosting de InfinityFree. Puedes acceder a la aplicación por medio del siguiente enlace: http://la-fortaleza-ca.free.nf/index.php
