@@ -25,4 +25,4 @@ Este proyecto es una aplicación web para la empresa La Fortaleza C.A. (Ficticia
 
 ## Servicio de Hosting
 
-El proyecto se encuentra subido al servicio de hosting de InfinityFree. Puedes acceder a la aplicación por medio del siguiente enlace: http://la-fortaleza-ca.free.nf/index.php
+El proyecto se encuentra subido al servicio de hosting de InfinityFree. Puedes acceder a la aplicación por medio del siguiente enlace: https://la-fortaleza-ca.free.nf/
