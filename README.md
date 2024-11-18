@@ -1,4 +1,4 @@
-# the-fortress
+# la-fortaleza-ca
 
 Este proyecto es una aplicación web para la empresa La Fortaleza C.A. (Ficticia) de RIF: J-090345234, que permite generar un reporte mensual de los ingresos y egresos de la empresa, mostrando el resultado neto (ganancias o pérdidas) para el mes seleccionado.
 
