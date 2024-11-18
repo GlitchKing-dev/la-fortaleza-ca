@@ -1,6 +1,5 @@
-<!-- php/procesar_egreso.php -->
 <?php
-include 'conexion.php';
+include '../db/conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fecha = $_POST['fecha'];

@@ -1,22 +1,43 @@
+<?php
+// Inicio de sesión
+session_start();
+
+// Verifica que el usuario esté autenticado y tenga el rol de 'gerente'. 
+// Si no cumple con estas condiciones, lo redirige al inicio de sesión.
+if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'gerente') {
+    header("Location: ../pages/login.php");
+    exit;
+}
+
+require_once '../db/conexion.php';
+
+// Consultar los ingresos y egresos
+$ingresos_query = "SELECT * FROM ingresos";
+$egresos_query = "SELECT * FROM egresos";
+
+$ingresos = $conexion->query($ingresos_query)->fetchAll(PDO::FETCH_ASSOC);
+$egresos = $conexion->query($egresos_query)->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resultado neto mensual de la empresa de productos de construcción la Fortaleza C.A.">
+    <meta name="description" content="Resultado neto mensual de la empresa de productos de construcción La Fortaleza C.A.">
     <meta name="keywords" content="La Fortaleza C.A., The Fortress, Reporte, Resultados netos">
     <meta name="author" content="Miguel Bethancourt, Sugeidy Manzanilla, Saúl Ramírez, Frank Delgadillo">
 
     <!-- Open graph -->
     <meta property="og:title" content="Reporte de La Fortaleza C.A.">
     <meta property="og:image" content="/assets/img/image-preview.png">
-    <meta property="og:image:alt" content="Logotipo de La Fortaleza C.A.">
-    <meta property="og:description" content="Registro de egresos de la empresa la Fortaleza C.A.">
+    <meta property="og:image:alt" content="Logo de La Fortaleza C.A.">
+    <meta property="og:description" content="Reporte mensual de la empresa La Fortaleza C.A.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="La Fortaleza C.A.">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:url" content="https://la-fortaleza-ca.free.nf/pages/reporte.php">
+    <meta property="og:url" content="https://fortaleza-ca.rf.gd/pages/reporte.php">
     
     <!-- Estilos -->
     <link rel="stylesheet" href="/assets/css/reporte-styles.css">
@@ -31,9 +52,10 @@
         <h1>La Fortaleza C.A.</h1>
         <p class="rif">RIF: J-090345234</p>
         <nav>
-            <a class="nav__link" href="../index.php">. Inicio .</a>
-            <a class="nav__link" href="ingresos.php">. Registrar Ingreso .</a>
-            <a class="nav__link" href="egresos.php">. Registrar Egreso .</a>
+            <a class="nav__link" href="/index.php"> Inicio </a>
+            <a class="nav__link" href="ingresos.php"> Registrar Ingreso </a>
+            <a class="nav__link" href="egresos.php"> Registrar Egreso </a>
+            <a class="nav__link" href="../scripts/logout.php"> Cerrar Sesión </a>
         </nav>
     </header>
     <main>
@@ -47,7 +69,7 @@
         </form>
 
     <?php 
-    include '../php/conexion.php'; 
+    include '../db/conexion.php'; 
 
     if (isset($_GET['mes'])) {
         $mesSeleccionado = $_GET['mes'];
@@ -82,7 +104,7 @@
         </section>
     <?php 
     } else {
-        echo '<p class="message">Por favor, seleccione un mes para generar el reporte!</p>';
+        echo '<p class="message">Por favor, seleccione un mes para generar el reporte</p>';
     } 
     ?>
 

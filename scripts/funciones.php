@@ -1,5 +1,7 @@
-<!-- php/funciones.php -->
 <?php
+
+// Incluir el archivo de conexión a la base de datos
+require_once '../db/conexion.php';
 
 // Función para calcular la ganancia o pérdida
 function calcularResultado($conexion) {
